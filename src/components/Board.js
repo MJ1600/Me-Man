@@ -209,7 +209,8 @@ const [showLeaderboard, setShowLeaderboard] = useState(false);
     }
   };
 
-  const checkWin = () => {
+    const checkWin = () => {
+  if (showFinalScore) return;
     if(!cells.includes(0) && !cells.includes(3)){
       if(currentLevel < levels.length - 1){
         victorySound.play();
